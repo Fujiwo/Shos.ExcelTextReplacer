@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A56DE644-E2EA-4A6A-A4A5-F4EEE25FF207}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ExcelTextReplacer</RootNamespace>
-    <AssemblyName>ExcelTextReplacer</AssemblyName>
+    <RootNamespace>Shos.ExcelTextReplacer</RootNamespace>
+    <AssemblyName>Shos.ExcelTextReplacer</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
