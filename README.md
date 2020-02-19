@@ -3,7 +3,7 @@ Excel Text Replacer
 
 ## Usage
 
-ExcelTextReplacer [targetExcelFilePath] [replacementListExcelFilePath]
+Shos.ExcelTextReplacer [targetExcelFilePath] [replacementListExcelFilePath]
 
 ex.
 
