@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace ExcelTextReplacer
+namespace Shos.ExcelTextReplacer
 {
     class Program
     {
@@ -112,7 +112,7 @@ namespace ExcelTextReplacer
         }
 
         static void Usage() => Console.WriteLine(
-            "Usage:\nExcelTextReplacer [targetExcelFilePath] [replacementListExcelFilePath]\n" +
+            "Usage:\nShos.ExcelTextReplacer [targetExcelFilePath] [replacementListExcelFilePath]\n" +
             "\n" +
             "ex.\n" +
             "\n" +
