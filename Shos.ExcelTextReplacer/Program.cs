@@ -22,13 +22,17 @@ namespace Shos.ExcelTextReplacer
         static (string, string)? GetFilePaths(string[] args)
         {
             if (args.Length >= 2) {
-                var targetExcelFilePath          = args[0];
-                var replacementListExcelFilePath = args[1];
-                if (File.Exists(targetExcelFilePath) && File.Exists(replacementListExcelFilePath))
+                var targetExcelFilePath          = ToFullPath(args[0]);
+                var replacementListExcelFilePath = ToFullPath(args[1]);
+                if (!string.IsNullOrWhiteSpace(targetExcelFilePath) &&
+                    !string.IsNullOrWhiteSpace(targetExcelFilePath))
                     return (targetExcelFilePath, replacementListExcelFilePath);
             }
             return null;
         }
+
+        static string ToFullPath(string filePath)
+            => File.Exists(filePath) ? Path.GetFullPath(filePath) : null;
 
         static void Replace(string targetExcelFilePath, string replacementListExcelFilePath)
         {
