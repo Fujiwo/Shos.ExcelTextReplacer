@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sho's Software")]
 [assembly: AssemblyProduct("Shos.ExcelTextReplacer")]
-[assembly: AssemblyCopyright("Copyright © 2017-2019 Fujio Kojima")]
+[assembly: AssemblyCopyright("Copyright © 2017-2020 Fujio Kojima")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
