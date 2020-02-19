@@ -7,6 +7,8 @@ namespace ExcelTextReplacer
 {
     class Program
     {
+        const int maxRow = 100;
+
         static void Main(string[] args)
         {
             (string targetExcelFilePath, string replacementListExcelFilePath)? paths = GetFilePaths(args);
@@ -56,7 +58,7 @@ namespace ExcelTextReplacer
             var replacementTable = new Dictionary<string, string>();
 
             foreach (Excel.Worksheet sheet in workbook.Sheets) {
-                for (int row = 1; row < /*short.MaxValue*/ 100; row++) {
+                for (int row = 1; row < /*short.MaxValue*/ maxRow; row++) {
                     var fromText = ToText(sheet.Cells[row, 1]);
                     var toText   = ToText(sheet.Cells[row, 2]);
                     if (!string.IsNullOrWhiteSpace(fromText) && !string.IsNullOrWhiteSpace(toText)) {
