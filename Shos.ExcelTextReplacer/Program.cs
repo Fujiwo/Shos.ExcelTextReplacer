@@ -24,8 +24,8 @@ namespace Shos.ExcelTextReplacer
             if (args.Length >= 2) {
                 var targetExcelFilePath          = ToFullPath(args[0]);
                 var replacementListExcelFilePath = ToFullPath(args[1]);
-                if (!string.IsNullOrWhiteSpace(targetExcelFilePath) &&
-                    !string.IsNullOrWhiteSpace(targetExcelFilePath))
+                if (!string.IsNullOrWhiteSpace(targetExcelFilePath         ) &&
+                    !string.IsNullOrWhiteSpace(replacementListExcelFilePath))
                     return (targetExcelFilePath, replacementListExcelFilePath);
             }
             return null;
@@ -96,8 +96,8 @@ namespace Shos.ExcelTextReplacer
                 var columnCount = sheet.UsedRange.Columns.Count;
                 Console.WriteLine($"sheet{sheetCount} - row count: {rowCount}, column count: {columnCount}");
 
-                for (int row = 1; row < rowCount; row++) {
-                    for (int column = 1; column < columnCount; column++) {
+                for (int row = 1; row <= rowCount; row++) {
+                    for (int column = 1; column <= columnCount; column++) {
                         var range = sheet.Cells[row, column] as Excel.Range;
                         if (range != null) {
                             dynamic val = range.Value;
